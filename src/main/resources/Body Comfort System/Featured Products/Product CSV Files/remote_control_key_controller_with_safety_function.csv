@@ -1,0 +1,6 @@
+"RCK_idle", "rck_but_lock", "rck_lock", "RCK_idle"
+"RCK_idle", "rck_but_unlock", "rck_unlock", "RCK_sf_on"
+"RCK_sf_on", "rck_but_lock", "rck_lock", "RCK_idle"
+"RCK_sf_on", "time_rck_sf_elapsed", "rck_lock", "RCK_idle"
+"RCK_sf_on", "door_open", "-", "RCK_sf_unlock_idle"
+"RCK_sf_unlock_idle", "rck_but_lock", "rck_lock", "RCK_idle"
