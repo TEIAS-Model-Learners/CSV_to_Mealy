@@ -1,2 +1,2 @@
-"AS_alarm_detected_LED_off", "as_alarm_was_detected", "led_as_alarm_detected_on", "AS_alarm_detected_LED_on"
-"AS_alarm_detected_LED_on", "as_alarm_was_confirmed", "led_as_alarm_detected_off", "AS_alarm_detected_LED_off"
+"AS_alarm_detected_LED_off","as_alarm_was_detected","led_as_alarm_detected_on","AS_alarm_detected_LED_on"
+"AS_alarm_detected_LED_on","as_alarm_was_confirmed","led_as_alarm_detected_off","AS_alarm_detected_LED_off"

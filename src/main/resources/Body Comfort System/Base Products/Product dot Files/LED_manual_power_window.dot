@@ -1,0 +1,14 @@
+digraph G {
+label=""
+LED_ManPW_off [color="red"]
+LED_ManPW_off
+LED_ManPW_dn_on
+LED_ManPW_up_on
+LED_ManPW_off [label="LED_ManPW_off"];
+LED_ManPW_off -> LED_ManPW_dn_on[label="pw_mv_dn/led_pw_dn_on"]
+LED_ManPW_off -> LED_ManPW_up_on[label="pw_mv_up/led_pw_up_on"]
+LED_ManPW_dn_on [label="LED_ManPW_dn_on"];
+LED_ManPW_dn_on -> LED_ManPW_off[label="release_pw_but/led_pw_dn_off"]
+LED_ManPW_up_on [label="LED_ManPW_up_on"];
+LED_ManPW_up_on -> LED_ManPW_off[label="release_pw_but/led_pw_up_off"]
+}

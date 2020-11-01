@@ -1,0 +1,26 @@
+digraph G {
+label=""
+PW_up [color="red"]
+PW_up
+PW_pend_auto_dn
+PW_pend
+PW_pend_auto_up
+PW_fp_pend
+PW_dn
+PW_up [label="PW_up"];
+PW_up -> PW_pend_auto_dn[label="pw_but_dn/pw_auto_mv_dn"]
+PW_pend_auto_dn [label="PW_pend_auto_dn"];
+PW_pend_auto_dn -> PW_pend[label="pw_but_up/pw_auto_mv_stop"]
+PW_pend_auto_dn -> PW_dn[label="pw_pos_dn/pw_auto_mv_stop"]
+PW_pend [label="PW_pend"];
+PW_pend -> PW_pend_auto_dn[label="pw_but_dn/pw_auto_mv_dn"]
+PW_pend -> PW_pend_auto_up[label="pw_but_up/pw_auto_mv_up"]
+PW_pend_auto_up [label="PW_pend_auto_up"];
+PW_pend_auto_up -> PW_pend[label="pw_but_dn/pw_auto_mv_stop"]
+PW_pend_auto_up -> PW_up[label="pw_pos_up/pw_auto_mv_stop"]
+PW_pend_auto_up -> PW_fp_pend[label="fp_on"/pw_auto_mv_stop""]
+PW_fp_pend [label="PW_fp_pend"];
+PW_fp_pend -> PW_pend_auto_dn[label="fp_off/pw_auto_mv_dn"]
+PW_dn [label="PW_dn"];
+PW_dn -> PW_pend_auto_up[label="pw_but_up/pw_auto_mv_up"]
+}

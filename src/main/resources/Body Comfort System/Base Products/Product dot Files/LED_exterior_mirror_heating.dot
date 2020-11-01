@@ -1,0 +1,10 @@
+digraph G {
+label=""
+EM_heating_LED_off [color="red"]
+EM_heating_LED_off
+EM_heating_LED_on
+EM_heating_LED_off [label="EM_heating_LED_off"];
+EM_heating_LED_off -> EM_heating_LED_on[label="heating_on/led_em_heating_on"]
+EM_heating_LED_on [label="EM_heating_LED_on"];
+EM_heating_LED_on -> EM_heating_LED_off[label="heating_off/led_em_heating_off"]
+}

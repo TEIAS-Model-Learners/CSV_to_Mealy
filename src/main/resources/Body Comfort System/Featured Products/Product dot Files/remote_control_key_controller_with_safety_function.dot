@@ -1,0 +1,16 @@
+digraph G {
+label=""
+RCK_idle [color="red"]
+RCK_idle
+RCK_sf_on
+RCK_sf_unlock_idle
+RCK_idle [label="RCK_idle"];
+RCK_idle -> RCK_idle[label="rck_but_lock/rck_lock"]
+RCK_idle -> RCK_sf_on[label="rck_but_unlock/rck_unlock"]
+RCK_sf_on [label="RCK_sf_on"];
+RCK_sf_on -> RCK_idle[label="rck_but_lock/rck_lock"]
+RCK_sf_on -> RCK_idle[label="time_rck_sf_elapsed/rck_lock"]
+RCK_sf_on -> RCK_sf_unlock_idle[label="door_open/-"]
+RCK_sf_unlock_idle [label="RCK_sf_unlock_idle"];
+RCK_sf_unlock_idle -> RCK_idle[label="rck_but_lock/rck_lock"]
+}

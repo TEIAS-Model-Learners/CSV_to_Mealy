@@ -1,0 +1,12 @@
+digraph G {
+label=""
+CLS_unlock [color="red"]
+CLS_unlock
+CLS_lock
+CLS_unlock [label="CLS_unlock"];
+CLS_unlock -> CLS_lock[label="key_pos_lock/cls_lock"]
+CLS_unlock -> CLS_lock[label="rck_lock/cls_lock"]
+CLS_lock [label="CLS_lock"];
+CLS_lock -> CLS_unlock[label="key_pos_unlock/cls_unlock"]
+CLS_lock -> CLS_unlock[label="rck_unlock/cls_unlock"]
+}
