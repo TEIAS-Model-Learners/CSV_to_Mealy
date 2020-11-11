@@ -1,22 +1,19 @@
-digraph G {
-label=""
-AS_activated_off [color="red"]
-AS_on
-AS_alarm
-AS_deactivated
-AS_activated_off [label="AS_activated_off"];
-AS_activated_off -> AS_on[label="key_pos_lock/as_active_on"]
-AS_activated_off -> AS_on[label="rck_lock/as_active_on"]
-AS_activated_off -> AS_deactivated[label="as_deactivated/-"]
-AS_on [label="AS_on"];
-AS_on -> AS_activated_off[label="rck_unlock/as_active_off"]
-AS_on -> AS_activated_off[label="key_pos_unlock/as_active_off"]
-AS_on -> AS_alarm[label="as_alarm_detected/as_alarm_on"]
-AS_on -> AS_alarm[label="im_alarm_detected/im_alarm_on.as_alarm_on"]
-AS_alarm [label="AS_alarm"];
-AS_alarm -> AS_on[label="time_alarm_elapsed/alarm_was_detected.as_im_alarm_off.as_alarm_off"]
-AS_alarm -> AS_activated_off[label="key_pos_unlock/as_im_alarm_off.as_alarm_off.as_active_off"]
-AS_alarm -> AS_activated_off[label="rck_unlock/as_im_alarm_off.as_alarm_off.as_active_off"]
-AS_deactivated [label="AS_deactivated"];
-AS_deactivated -> AS_activated_off[label="as_activated/-"]
-}
+AS_activated_off -- key_pos_lock/as_active_on -> AS_on
+AS_activated_off -- rck_lock/as_active_on -> AS_on
+AS_activated_off -- as_deactivated/- -> AS_deactivated
+
+
+AS_on -- rck_unlock/as_active_off -> AS_activated_off
+AS_on -- key_pos_unlock/as_active_off -> AS_activated_off
+AS_on -- as_alarm_detected/as_alarm_on -> AS_alarm
+AS_on -- im_alarm_detected/im_alarm_on.as_alarm_on -> AS_alarm
+
+
+AS_alarm -- time_alarm_elapsed/alarm_was_detected.as_im_alarm_off.as_alarm_off -> AS_on
+AS_alarm -- key_pos_unlock/as_im_alarm_off.as_alarm_off.as_active_off -> AS_activated_off
+AS_alarm -- rck_unlock/as_im_alarm_off.as_alarm_off.as_active_off -> AS_activated_off
+
+
+AS_deactivated -- as_activated/- -> AS_activated_off
+
+

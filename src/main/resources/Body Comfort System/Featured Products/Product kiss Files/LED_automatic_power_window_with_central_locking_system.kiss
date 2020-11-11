@@ -1,22 +1,19 @@
-digraph G {
-label=""
-LED_AutoPW_off [color="red"]
-LED_AutoPW_dn_on
-LED_AutoPW_un_on
-LED_AutoPW_up_cls_on
-LED_AutoPW_cls_switch_on
-LED_AutoPW_off [label="LED_AutoPW_off"];
-LED_AutoPW_off -> LED_AutoPW_dn_on[label="pw_auto_mv_dn/led_pw_dn_on"]
-LED_AutoPW_off -> LED_AutoPW_un_on[label="pw_auto_mv_up/led_pw_up_on"]
-LED_AutoPW_off -> LED_AutoPW_up_cls_on[label="cls_lock/-"]
-LED_AutoPW_dn_on [label="LED_AutoPW_dn_on"];
-LED_AutoPW_dn_on -> LED_AutoPW_off[label="pw_auto_mv_stop/led_pw_dn_off"]
-LED_AutoPW_un_on [label="LED_AutoPW_un_on"];
-LED_AutoPW_un_on -> LED_AutoPW_off[label="pw_auto_mv_stop/led_pw_up_off"]
-LED_AutoPW_un_on -> LED_AutoPW_cls_switch_on[label="cls_lock/led_pw_cls_up_on"]
-LED_AutoPW_up_cls_on [label="LED_AutoPW_up_cls_on"];
-LED_AutoPW_up_cls_on -> LED_AutoPW_cls_switch_on[label="pw_auto_mv_up/led_pw_up_on.led_pw_cls_up_on"]
-LED_AutoPW_cls_switch_on [label="LED_AutoPW_cls_switch_on"];
-LED_AutoPW_cls_switch_on -> LED_AutoPW_un_on[label="cls_unlock/led_pw_cls_up_off"]
-LED_AutoPW_cls_switch_on -> LED_AutoPW_off[label="pw_auto_mv_stop/led_pw_cls_up_off.led_pw_up_off"]
-}
+LED_AutoPW_off -- pw_auto_mv_dn/led_pw_dn_on -> LED_AutoPW_dn_on
+LED_AutoPW_off -- pw_auto_mv_up/led_pw_up_on -> LED_AutoPW_up_on
+LED_AutoPW_off -- cls_lock/- -> LED_AutoPW_up_cls_on
+
+
+LED_AutoPW_dn_on -- pw_auto_mv_stop/led_pw_dn_off -> LED_AutoPW_off
+
+
+LED_AutoPW_up_on -- pw_auto_mv_stop/led_pw_up_off -> LED_AutoPW_off
+LED_AutoPW_up_on -- cls_lock/led_pw_cls_up_on -> LED_AutoPW_cls_switch_on
+
+
+LED_AutoPW_up_cls_on -- pw_auto_mv_up/led_pw_up_on.led_pw_cls_up_on -> LED_AutoPW_cls_switch_on
+
+
+LED_AutoPW_cls_switch_on -- cls_unlock/led_pw_cls_up_off -> LED_AutoPW_up_on
+LED_AutoPW_cls_switch_on -- pw_auto_mv_stop/led_pw_cls_up_off.led_pw_up_off -> LED_AutoPW_off
+
+

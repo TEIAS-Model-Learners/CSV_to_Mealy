@@ -1,15 +1,12 @@
-digraph G {
-label=""
-Controller [color="red"]
-Controller [label="Controller"];
-Controller -> Controller[label="pw_but_mv_dn/pw_but_dn"]
-Controller -> Controller[label="pw_but_mv_up/pw_but_up"]
-Controller -> Controller[label="em_but_mv_up/em_but_up"]
-Controller -> Controller[label="em_but_mv_dn/em_but_dn"]
-Controller -> Controller[label="em_but_mv_right/em_but_right"]
-Controller -> Controller[label="em_but_mv_left/em_but_left"]
-Controller -> Controller[label="deactivate_as/as_deactivated"]
-Controller -> Controller[label="activate_as/as_activated"]
-Controller -> Controller[label="release_pw_but_up/release_pw_but"]
-Controller -> Controller[label="release_pw_but_dn/release_pw_but"]
-}
+Controller -- pw_but_mv_dn/pw_but_dn -> Controller
+Controller -- pw_but_mv_up/pw_but_up -> Controller
+Controller -- em_but_mv_up/em_but_up -> Controller
+Controller -- em_but_mv_dn/em_but_dn -> Controller
+Controller -- em_but_mv_right/em_but_right -> Controller
+Controller -- em_but_mv_left/em_but_left -> Controller
+Controller -- deactivate_as/as_deactivated -> Controller
+Controller -- activate_as/as_activated -> Controller
+Controller -- release_pw_but_up/release_pw_but -> Controller
+Controller -- release_pw_but_dn/release_pw_but -> Controller
+
+

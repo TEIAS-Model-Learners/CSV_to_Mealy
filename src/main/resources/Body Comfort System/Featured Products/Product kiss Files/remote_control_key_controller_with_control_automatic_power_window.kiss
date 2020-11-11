@@ -1,9 +1,6 @@
-digraph G {
-label=""
-RCK_idle [color="red"]
-RCK_idle [label="RCK_idle"];
-RCK_idle -> RCK_idle[label="pw_rm_dn/pw_but_dn"]
-RCK_idle -> RCK_idle[label="rck_but_lock/rck_lock"]
-RCK_idle -> RCK_idle[label="pw_rm_up/pw_but_up"]
-RCK_idle -> RCK_idle[label="rck_but_unlock/rck_unlock"]
-}
+RCK_idle -- pw_rm_dn/pw_but_dn -> RCK_idle
+RCK_idle -- rck_but_lock/rck_lock -> RCK_idle
+RCK_idle -- pw_rm_up/pw_but_up -> RCK_idle
+RCK_idle -- rck_but_unlock/rck_unlock -> RCK_idle
+
+

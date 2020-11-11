@@ -1,9 +1,6 @@
-digraph G {
-label=""
-EM_LED_top_off [color="red"]
-EM_LED_top_on
-EM_LED_top_off [label="EM_LED_top_off"];
-EM_LED_top_off -> EM_LED_top_on[label="em_pos_vert_top/led_em_top_on"]
-EM_LED_top_on [label="EM_LED_top_on"];
-EM_LED_top_on -> EM_LED_top_off[label="em_pos_vert_pend/led_em_top_off"]
-}
+EM_LED_top_off -- em_pos_vert_top/led_em_top_on -> EM_LED_top_on
+
+
+EM_LED_top_on -- em_pos_vert_pend/led_em_top_off -> EM_LED_top_off
+
+

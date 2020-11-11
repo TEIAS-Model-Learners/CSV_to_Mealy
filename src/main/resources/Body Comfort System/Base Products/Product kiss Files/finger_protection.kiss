@@ -1,9 +1,6 @@
-digraph G {
-label=""
-FP_off [color="red"]
-FP_on
-FP_off [label="FP_off"];
-FP_off -> FP_on[label="finger_detected/fp_on"]
-FP_on [label="FP_on"];
-FP_on -> FP_off[label="pw_but_dn/fp_off"]
-}
+FP_off -- finger_detected/fp_on -> FP_on
+
+
+FP_on -- pw_but_dn/fp_off -> FP_off
+
+

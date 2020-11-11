@@ -1,9 +1,6 @@
-digraph G {
-label=""
-AS_active_LED_off [color="red"]
-AS_active_LED_on
-AS_active_LED_off [label="AS_active_LED_off"];
-AS_active_LED_off -> AS_active_LED_on[label="as_active_on/led_as_active_on"]
-AS_active_LED_on [label="AS_active_LED_on"];
-AS_active_LED_on -> AS_active_LED_off[label="as_active_off/led_as_active_off"]
-}
+AS_active_LED_off -- as_active_on/led_as_active_on -> AS_active_LED_on
+
+
+AS_active_LED_on -- as_active_off/led_as_active_off -> AS_active_LED_off
+
+

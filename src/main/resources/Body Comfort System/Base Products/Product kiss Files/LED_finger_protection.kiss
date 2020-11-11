@@ -1,9 +1,6 @@
-digraph G {
-label=""
-FP_off_LED_off [color="red"]
-FP_on_LED_on
-FP_off_LED_off [label="FP_off_LED_off"];
-FP_off_LED_off -> FP_on_LED_on[label="fp_on/led_fp_on"]
-FP_on_LED_on [label="FP_on_LED_on"];
-FP_on_LED_on -> FP_off_LED_off[label="fp_off/led_fp_off"]
-}
+FP_off_LED_off -- fp_on/led_fp_on -> FP_on_LED_on
+
+
+FP_on_LED_on -- fp_off/led_fp_off -> FP_off_LED_off
+
+
