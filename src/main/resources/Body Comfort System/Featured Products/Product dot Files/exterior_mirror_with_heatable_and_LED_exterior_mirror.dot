@@ -1,7 +1,6 @@
 digraph G {
 label=""
 EM_hor_pending [color="red"]
-EM_hor_pending
 EM_bottom
 EM_bottom_left
 EM_hor_left

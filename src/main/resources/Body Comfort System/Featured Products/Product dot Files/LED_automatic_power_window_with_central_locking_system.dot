@@ -1,7 +1,6 @@
 digraph G {
 label=""
 LED_AutoPW_off [color="red"]
-LED_AutoPW_off
 LED_AutoPW_dn_on
 LED_AutoPW_un_on
 LED_AutoPW_up_cls_on

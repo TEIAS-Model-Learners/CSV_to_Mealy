@@ -1,7 +1,6 @@
 digraph G {
 label=""
 PW_up [color="red"]
-PW_up
 PW_pend_auto_dn
 PW_pend
 PW_dn

@@ -1,7 +1,6 @@
 digraph G {
 label=""
 CLS_unlock [color="red"]
-CLS_unlock
 CLS_lock
 car_driving_locked
 CLS_unlock [label="CLS_unlock"];

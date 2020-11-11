@@ -1,7 +1,6 @@
 digraph G {
 label=""
 RCK_idle [color="red"]
-RCK_idle
 RCK_sf_on
 'RCK_sf_on"
 RCK_sf_unlock_idle
