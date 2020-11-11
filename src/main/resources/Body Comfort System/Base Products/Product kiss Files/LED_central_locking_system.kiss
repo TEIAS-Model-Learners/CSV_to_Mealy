@@ -1,7 +1,6 @@
 digraph G {
 label=""
 CLS_LED_off [color="red"]
-CLS_LED_off
 CLS_LED_on
 CLS_LED_off [label="CLS_LED_off"];
 CLS_LED_off -> CLS_LED_on[label="cls_lock/led_cls_on"]

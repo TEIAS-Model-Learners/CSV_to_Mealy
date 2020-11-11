@@ -1,7 +1,6 @@
 digraph G {
 label=""
 CLS_unlock [color="red"]
-CLS_unlock
 CLS_lock
 CLS_unlock [label="CLS_unlock"];
 CLS_unlock -> CLS_lock[label="key_pos_lock/cls_lock"]

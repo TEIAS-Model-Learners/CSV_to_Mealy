@@ -1,7 +1,6 @@
 digraph G {
 label=""
 AS_activated_off [color="red"]
-AS_activated_off
 AS_on
 AS_alarm
 AS_deactivated

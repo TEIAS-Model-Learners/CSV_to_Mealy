@@ -1,7 +1,6 @@
 digraph G {
 label=""
 FP_off [color="red"]
-FP_off
 FP_on
 FP_off [label="FP_off"];
 FP_off -> FP_on[label="finger_detected/fp_on"]

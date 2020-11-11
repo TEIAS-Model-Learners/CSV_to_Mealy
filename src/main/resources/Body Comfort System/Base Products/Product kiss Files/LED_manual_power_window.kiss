@@ -1,7 +1,6 @@
 digraph G {
 label=""
 LED_ManPW_off [color="red"]
-LED_ManPW_off
 LED_ManPW_dn_on
 LED_ManPW_up_on
 LED_ManPW_off [label="LED_ManPW_off"];

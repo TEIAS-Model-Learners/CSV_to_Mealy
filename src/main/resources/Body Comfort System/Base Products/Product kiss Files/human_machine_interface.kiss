@@ -1,7 +1,6 @@
 digraph G {
 label=""
 Controller [color="red"]
-Controller
 Controller [label="Controller"];
 Controller -> Controller[label="pw_but_mv_dn/pw_but_dn"]
 Controller -> Controller[label="pw_but_mv_up/pw_but_up"]

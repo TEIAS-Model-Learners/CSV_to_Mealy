@@ -1,7 +1,6 @@
 digraph G {
 label=""
 EM_LED_right_off [color="red"]
-EM_LED_right_off
 EM_LED_right_on
 EM_LED_right_off [label="EM_LED_right_off"];
 EM_LED_right_off -> EM_LED_right_on[label="em_pos_hor_right/led_em_right_on"]

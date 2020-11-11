@@ -1,7 +1,6 @@
 digraph G {
 label=""
 AS_alarm_detected_LED_off [color="red"]
-AS_alarm_detected_LED_off
 AS_alarm_detected_LED_on
 AS_alarm_detected_LED_off [label="AS_alarm_detected_LED_off"];
 AS_alarm_detected_LED_off -> AS_alarm_detected_LED_on[label="as_alarm_was_detected/led_as_alarm_detected_on"]
